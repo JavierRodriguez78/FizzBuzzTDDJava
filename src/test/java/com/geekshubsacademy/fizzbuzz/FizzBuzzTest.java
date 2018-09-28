@@ -11,4 +11,20 @@ public class FizzBuzzTest {
     {
         assertTrue(true);
     }
+
+    @Test
+    public void itShouldReturnFizzIfDivisibleByThree()
+    {
+        //Arrange
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int value = 3;
+
+        //Act
+        boolean result = fizzBuzz.isFizz(value);
+
+        //Assertion
+        assertTrue(result);
+
+    }
+
 }
