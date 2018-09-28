@@ -1,4 +1,5 @@
 package com.geekshubsacademy.fizzbuzz;
+import com.geekshubsacademy.fizzbuzz.rulesrepository.BuzzRule;
 import com.geekshubsacademy.fizzbuzz.rulesrepository.FizzRule;
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
@@ -24,7 +25,7 @@ public class BuzzRuleTest {
 
     @Test
     @UseDataProvider("dataNumberProviderForBuzz")
-    public void itShouldReturnFizzifDivisibleByFive(int value, boolean expected)
+    public void itShouldReturnBuzzifDivisibleByFive(int value, boolean expected)
     {
         BuzzRule buzzRule = new BuzzRule();
         boolean result = buzzRule.match(value);
