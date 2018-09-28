@@ -1,5 +1,6 @@
 package com.geekshubsacademy.fizzbuzz;
 
+import com.geekshubsacademy.fizzbuzz.rulesrepository.FizzRule;
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
