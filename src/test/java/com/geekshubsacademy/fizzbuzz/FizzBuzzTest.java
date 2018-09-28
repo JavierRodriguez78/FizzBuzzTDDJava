@@ -45,6 +45,18 @@ public class FizzBuzzTest {
                 { 90, true}
         };
     }
+    @DataProvider
+    public static Object[][] dataListProvider(){
+        return new Object [][]{
+                { 1, "1"},
+                { 2, "2"},
+                { 3, "Fizz"},
+                { 4, "4"},
+                { 5, "Buzz"},
+                { 15, "FizzBuzz"}
+        };
+    }
+
 
     @Test
     public void firstTest()
@@ -84,5 +96,17 @@ public class FizzBuzzTest {
         assertEquals(expected, result);
 
     }
+
+    @Test
+    @UseDataProvider("dataListProvider")
+    public void itShouldGenerateTheCorrectReplacementForEachNumber(final int input, final String expected)
+    {
+        //Arrange-Act
+        String  result = FizzBuzz.getReplacement(input);
+        //Assertion
+        assertEquals(expected, result);
+
+    }
+
 
 }
