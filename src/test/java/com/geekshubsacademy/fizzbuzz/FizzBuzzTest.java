@@ -13,7 +13,7 @@ import static junit.framework.TestCase.assertTrue;
 public class FizzBuzzTest {
 
     @DataProvider
-    public static Object[][] dataNumberProviderforFizz(){
+    public static Object[][] dataNumberProviderForFizz(){
         return new Object [][]{
                 { 3, true},
                 { 6, true},
@@ -24,7 +24,7 @@ public class FizzBuzzTest {
         };
     }
     @DataProvider
-    public static Object[][] dataNumberProviderforBuzz(){
+    public static Object[][] dataNumberProviderForBuzz(){
         return new Object [][]{
                 { 5, true},
                 { 10, true},
@@ -42,7 +42,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    @UseDataProvider("dataNumberProviderFizz")
+    @UseDataProvider("dataNumberProviderForFizz")
     public void itShouldReturnFizzIfDivisibleByThree(final int input, final boolean expected)
     {
         //Arrange
@@ -55,9 +55,8 @@ public class FizzBuzzTest {
     }
 
     @Test
-    @UseDataProvider("dataNumberProviderBuzz")
-
-    public void itShouldReturnFizzIfDivisibleByFive(final int input, final boolean expected)
+    @UseDataProvider("dataNumberProviderForBuzz")
+    public void itShouldReturnBuzzIfDivisibleByFive(final int input, final boolean expected)
     {
         //Arrange
         FizzBuzz fizzBuzz = new FizzBuzz();
